@@ -1,4 +1,9 @@
-$(document).ready(function() {
+$("#find-city").on("click", function(event) {
+
+    event.preventDefault();
+
+    var movie = $("#movie-input").val();
+
     var ApiKey = "60cd8f1a2d119cd70b98f1936f0a3ded"
 
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?"+"q=city&appid=" + ApiKey;
@@ -6,9 +11,7 @@ $(document).ready(function() {
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        console.log(queryURL);
-
-        console.log(response);
+       $("#temp-view").text(JSON.stringify(response));
 
         // Transfer content to HTML
         $(".city").html("<h1>" + response.name + " Weather Details</h1>");

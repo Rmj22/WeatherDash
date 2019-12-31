@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weaather Dashboard</title>
 </head>
-<input>
- <input id="city"></input>
- <button id="getWeatherForcast">Check now</button>
- <div id="showWeatherForcast"></div>   
+<body>
+<form id="movie-form">
+    <label for="city-input">Enter City</label>
+    <input type="text" id="city-input"><br>
+
+    <!-- This button will trigger our AJAX call -->
+    <input id="find-city" type="submit" value="Movie Search">
+
+</form> 
+<div id="temp-view"></div>
 </body>
 <script src="jquery-3.4.1.min.js"></script>
 <script src="weather.js"></script>
