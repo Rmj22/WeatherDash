@@ -8,7 +8,7 @@ $("#find-city").on("click", function(event) {
 
   var ApiKey = "60cd8f1a2d119cd70b98f1936f0a3ded"
 
-  var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + scity +"&units=imperial&appid=" + ApiKey;
+  var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + scity +"&units=imperial&appid=" + ApiKey;
   $.ajax({
       url: queryURL,
       method: "GET"
