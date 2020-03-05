@@ -1,0 +1,13 @@
+body {
+    background-color: #FFFFFF;
+}
+#temp-view {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+#current_city {
+    text-align: center;
+    display: block;
+    margin: auto;
+}

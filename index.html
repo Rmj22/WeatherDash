@@ -4,19 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weaather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Dashboard</title>
 </head>
 <body>
-<form id="movie-form">
+<form id="we-form">
     <label for="city-input">Enter City</label>
     <input type="text" id="city-input"><br>
 
     <!-- This button will trigger our AJAX call -->
-    <input id="find-city" type="submit" value="Movie Search">
+    <input id="find-city" type="submit" value="search">
 
 </form> 
-<div id="temp-view"></div>
+<div class="jumbotron" id="temp-view">
+  <div class="row">
+    <div class="display-4" id="current_city">this is where city should be</div>
+    </div>
+    <div id="time"></div>
+    <div id="qicon"><img id="wicon" src="" alt="Weather icon"></div>
+    <div class="lead" id="info">description should be here</div>
+    <hr class="my-4">
+    <div class="row">
+    <div class="container" id="fiveday">
+      <h2>5 day look ahead</h2>
+      <div id="icond"> where the icons should display</div>
+    </div>
 </body>
-<script src="jquery-3.4.1.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="weather.js"></script>
 </html>
