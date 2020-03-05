@@ -25,7 +25,7 @@ $("#find-city").on("click", function(event) {
      var img = response.list[0].weather[0].icon
      var ccity = $("#current_city");
      var td = $("#time");
-     var pic = "http://openweathermap.org/img/w/" + img +".png";
+     var pic = "https://openweathermap.org/img/w/" + img +".png";
      console.log(time)
      ;
 
