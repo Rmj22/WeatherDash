@@ -1,7 +1,12 @@
 body {
-    background-color: #FFFFFF;
+    background-color: whitesmoke;
+}
+#info {
+
 }
 #temp-view {
+    background-color: #E3F4FE;
+    color: #19C3FB;
     text-align: center;
     display: block;
     margin: auto;

@@ -11,11 +11,12 @@
 <body>
 <form id="we-form">
     <label for="city-input">Enter City</label>
-    <input type="text" id="city-input"><br>
+    <input type="text"  id="city-input"><br>
 
     <!-- This button will trigger our AJAX call -->
+    
     <input id="find-city" type="submit" value="search">
-
+    
 </form> 
 <div class="jumbotron" id="temp-view">
   <div class="row">
@@ -30,11 +31,13 @@
       <h2>5 day look ahead</h2>
       <div id="icond"> where the icons should display</div>
     </div>
-</body>
-<script
+    <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
 <script src="weather.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</body>
+
 </html>

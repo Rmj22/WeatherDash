@@ -1,4 +1,5 @@
 //Handels information that displays at the top of the page 
+var forecast;
 $("#find-city").on("click", function(event) {
 
     var scity = $.trim($("#city-input").val());
@@ -14,7 +15,7 @@ $("#find-city").on("click", function(event) {
       method: "GET"
     }).then(function(response) {
     //  $("#temp-view").html(JSON.stringify(response));
-      
+    //  forecast = response.list
      var city = response.city.name;
      var time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 
@@ -26,7 +27,7 @@ $("#find-city").on("click", function(event) {
      var ccity = $("#current_city");
      var td = $("#time");
      var pic = "https://openweathermap.org/img/w/" + img +".png";
-     console.log(time)
+    //  console.log(response)
      ;
 
      var title = $("#current_city")
@@ -40,12 +41,40 @@ $("#find-city").on("click", function(event) {
      $(td).html("<h2>" + time + " current time</h2>");
      $(sum).html("<p1>" + des + " </p1>");
      $("#wicon").attr('src', pic)
+
+     fiveday(response.list)
+   
+    //  images(response.list.weather.icon)
+    
   })
 
 })
 
+// function images(img4){
+//   for (let i = 0;i < img4.length i++) {
+    
+//   }
+// }
+function fiveday(arr) {
+  // console.log(arr[3].dt_txt)
 
-
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i].dt_txt.indexOf("15:00:00")!==-1){
+      // console.log(arr[i])
+      var five = $("#fiveday")
+      // var dicon = $("#dicon").attr('src', pic + arr[i].weather.icon)
+      var card = $("<div>").addClass("card")
+     var title = $("<h2>").text(new Date(arr[i].dt_txt))
+     var temp = $("<p>").text("temp: " + arr[i].main.temp_max + " F")
+     var desc =$("<p1>").text("humidity " + arr[i].main.humidity + "%")
+     
+    five.append(card.append(title, temp, desc))
+    
+     console.log("the humidity is " + desc)
+    }
+    // console.log(arr[i])
+  }
+}
   
 
 // function fiveday() {
